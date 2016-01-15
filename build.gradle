@@ -1,0 +1,14 @@
+plugins {
+	id 'java'
+}
+
+repositories {
+	jcenter()
+}
+
+dependencies {
+	compile 'com.github.aesteve:nubes:1.0'
+
+	testCompile 'junit:junit:4.12'
+	testCompile 'io.vertx:vertx-unit:3.2.0'
+}
