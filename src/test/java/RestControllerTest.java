@@ -48,9 +48,9 @@ public class RestControllerTest {
 		client().getNow("/data/dashboard", response -> {
 			context.assertEquals(200, response.statusCode());
 			response.bodyHandler( buff -> {
-				context.assertEquals("hello", buff.toString("UTF-8"));
+				context.assertEquals("hello", received);
+				async.complete();
 			});
-			async.complete();
 		});
 	}
 
